@@ -1,0 +1,1 @@
+To model a calculator which accepts add, subtract, multiply, divide, cancel and exit as commands to do basic mathematics.
