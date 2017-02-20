@@ -1,8 +1,9 @@
 class Calculator {
     private final CalculatorMenu calculatorMenu;
-
-    Calculator(CalculatorMenu calculatorMenu) {
+    private final InputConsole inputConsole;
+    Calculator(CalculatorMenu calculatorMenu,InputConsole inputConsole) {
         this.calculatorMenu = calculatorMenu;
+        this.inputConsole = inputConsole;
     }
 
     void calculate(int option) {
@@ -10,20 +11,28 @@ class Calculator {
         NonArithmeticCalculatorOperation nonArithmeticOperation = calculatorMenu.getNonArithmeticOperation(option);
         switch (option) {
             case 1: {
-                arithmeticOperation.executeOperation(1, 2);
+                float operand1=inputConsole.getInput();
+                float operand2=inputConsole.getInput();
+                arithmeticOperation.executeOperation(operand1, operand2);
                 break;
             }
             case 2: {
-                arithmeticOperation.executeOperation(1, 2);
+                float operand1=inputConsole.getInput();
+                float operand2=inputConsole.getInput();
+                arithmeticOperation.executeOperation(operand1, operand2);
                 break;
             }
             case 3: {
-                arithmeticOperation.executeOperation(4, 3);
+                float operand1=inputConsole.getInput();
+                float operand2=inputConsole.getInput();
+                arithmeticOperation.executeOperation(operand1, operand2);
                 break;
             }
             case 4: {
+                float operand1=inputConsole.getInput();
+                float operand2=inputConsole.getInput();
                 try {
-                    arithmeticOperation.executeOperation(4, 3);
+                    arithmeticOperation.executeOperation(operand1, operand2);
                     break;
                 } catch (NumberFormatException exception) {
                     System.out.println("Invalid Input");
