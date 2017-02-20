@@ -32,6 +32,7 @@ public class CalculatorTest {
         calculator.calculate(4);
         verify(dummyExit, times(1)).executeOperation();
     }
+
     @Test
     public void shouldPerformMultiplicationOperationForOption3() {
         CalculatorMenu dummyMenu = mock(CalculatorMenu.class);
@@ -39,6 +40,6 @@ public class CalculatorTest {
         Multiplication dummyMultiplication = mock(Multiplication.class);
         when(dummyMenu.getArithmeticOperation(3)).thenReturn(dummyMultiplication);
         calculator.calculate(3);
-        verify(dummyMultiplication, times(1)).executeOperation(anyFloat(),anyFloat());
+        verify(dummyMultiplication, times(1)).executeOperation(anyFloat(), anyFloat());
     }
 }

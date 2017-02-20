@@ -8,7 +8,7 @@ class CalculatorMenu {
     CalculatorMenu() {
         menuOne.put(1, new Addition());
         menuOne.put(2, new Subtraction());
-        menuOne.put(3,new Multiplication());
+        menuOne.put(3, new Multiplication());
         menuTwo.put(4, new Exit());
     }
 

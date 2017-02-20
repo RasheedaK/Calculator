@@ -23,6 +23,7 @@ public class CalculatorMenuTest {
         NonArithmeticCalculatorOperation operation = calculatorMenu.getNonArithmeticOperation(4);
         assertTrue(operation instanceof Exit);
     }
+
     @Test
     public void shouldReturnMultiplicationAsCalculatorOperationForOption3() {
         CalculatorMenu calculatorMenu = new CalculatorMenu();
