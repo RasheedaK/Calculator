@@ -9,7 +9,8 @@ class CalculatorMenu {
         menuOne.put(1, new Addition());
         menuOne.put(2, new Subtraction());
         menuOne.put(3, new Multiplication());
-        menuTwo.put(4, new Exit());
+        menuOne.put(4, new Division());
+        menuTwo.put(5, new Exit());
     }
 
     ArithmeticCalculatorOperation getArithmeticOperation(int option) {
@@ -19,6 +20,5 @@ class CalculatorMenu {
     NonArithmeticCalculatorOperation getNonArithmeticOperation(int option) {
         return menuTwo.get(option);
     }
-
 
 }

@@ -18,9 +18,9 @@ public class CalculatorMenuTest {
     }
 
     @Test
-    public void shouldReturnExitAsOperationForOption4() {
+    public void shouldReturnExitAsOperationForOption5() {
         CalculatorMenu calculatorMenu = new CalculatorMenu();
-        NonArithmeticCalculatorOperation operation = calculatorMenu.getNonArithmeticOperation(4);
+        NonArithmeticCalculatorOperation operation = calculatorMenu.getNonArithmeticOperation(5);
         assertTrue(operation instanceof Exit);
     }
 
@@ -29,5 +29,12 @@ public class CalculatorMenuTest {
         CalculatorMenu calculatorMenu = new CalculatorMenu();
         ArithmeticCalculatorOperation operation = calculatorMenu.getArithmeticOperation(3);
         assertTrue(operation instanceof Multiplication);
+    }
+
+    @Test
+    public void shouldReturnDivisionAsCalculatorOperationForOption4() {
+        CalculatorMenu calculatorMenu = new CalculatorMenu();
+        ArithmeticCalculatorOperation operation = calculatorMenu.getArithmeticOperation(4);
+        assertTrue(operation instanceof Division);
     }
 }

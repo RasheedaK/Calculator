@@ -7,7 +7,7 @@ public class CalculatorTest {
     public void shouldPerformAdditionOperationForOption1() {
         CalculatorMenu dummyMenu = mock(CalculatorMenu.class);
         InputConsole dummyInputConsole = mock(InputConsole.class);
-        Calculator calculator = new Calculator(dummyMenu,dummyInputConsole);
+        Calculator calculator = new Calculator(dummyMenu, dummyInputConsole);
         Addition dummyAddition = mock(Addition.class);
         when(dummyMenu.getArithmeticOperation(1)).thenReturn(dummyAddition);
 
@@ -19,7 +19,7 @@ public class CalculatorTest {
     public void shouldPerformSubtractionOperationForOption2() {
         CalculatorMenu dummyMenu = mock(CalculatorMenu.class);
         InputConsole dummyInputConsole = mock(InputConsole.class);
-        Calculator calculator = new Calculator(dummyMenu,dummyInputConsole);
+        Calculator calculator = new Calculator(dummyMenu, dummyInputConsole);
         Subtraction dummySubtraction = mock(Subtraction.class);
         when(dummyMenu.getArithmeticOperation(2)).thenReturn(dummySubtraction);
         calculator.calculate(2);
@@ -30,7 +30,7 @@ public class CalculatorTest {
     public void shouldPerformExitOperationForOption5() {
         CalculatorMenu dummyMenu = mock(CalculatorMenu.class);
         InputConsole dummyInputConsole = mock(InputConsole.class);
-        Calculator calculator = new Calculator(dummyMenu,dummyInputConsole);
+        Calculator calculator = new Calculator(dummyMenu, dummyInputConsole);
         Exit dummyExit = mock(Exit.class);
         when(dummyMenu.getNonArithmeticOperation(5)).thenReturn(dummyExit);
         calculator.calculate(5);
@@ -41,17 +41,18 @@ public class CalculatorTest {
     public void shouldPerformMultiplicationOperationForOption3() {
         CalculatorMenu dummyMenu = mock(CalculatorMenu.class);
         InputConsole dummyInputConsole = mock(InputConsole.class);
-        Calculator calculator = new Calculator(dummyMenu,dummyInputConsole);
+        Calculator calculator = new Calculator(dummyMenu, dummyInputConsole);
         Multiplication dummyMultiplication = mock(Multiplication.class);
         when(dummyMenu.getArithmeticOperation(3)).thenReturn(dummyMultiplication);
         calculator.calculate(3);
         verify(dummyMultiplication, times(1)).executeOperation(anyFloat(), anyFloat());
     }
+
     @Test
     public void shouldPerformDivisionOperationForOption4() {
         CalculatorMenu dummyMenu = mock(CalculatorMenu.class);
         InputConsole dummyInputConsole = mock(InputConsole.class);
-        Calculator calculator = new Calculator(dummyMenu,dummyInputConsole);
+        Calculator calculator = new Calculator(dummyMenu, dummyInputConsole);
         Division dummyDivision = mock(Division.class);
         when(dummyMenu.getArithmeticOperation(4)).thenReturn(dummyDivision);
         calculator.calculate(4);
