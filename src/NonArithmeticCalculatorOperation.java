@@ -1,2 +1,3 @@
-public class NonArithmeticCalculatorOperation {
+interface NonArithmeticCalculatorOperation {
+    void executeOperation();
 }

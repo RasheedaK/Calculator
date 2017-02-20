@@ -6,14 +6,20 @@ public class CalculatorMenuTest {
     @Test
     public void shouldReturnAdditionAsCalculatorOperationForOption1() {
         CalculatorMenu calculatorMenu = new CalculatorMenu();
-        ArithmeticCalculatorOperation calculatorOperation = calculatorMenu.getCalculatorOperation(1);
+        ArithmeticCalculatorOperation calculatorOperation = calculatorMenu.getArithmeticOperation(1);
         assertTrue(calculatorOperation instanceof Addition);
     }
 
     @Test
     public void shouldReturnSubtractionAsCalculatorOperationForOption2() {
         CalculatorMenu calculatorMenu = new CalculatorMenu();
-        ArithmeticCalculatorOperation calculatorOperation = calculatorMenu.getCalculatorOperation(2);
+        ArithmeticCalculatorOperation calculatorOperation = calculatorMenu.getArithmeticOperation(2);
         assertTrue(calculatorOperation instanceof Subtraction);
+    }
+    @Test
+    public void shouldReturnExitAsOperationForOption3() {
+        CalculatorMenu calculatorMenu = new CalculatorMenu();
+        NonArithmeticCalculatorOperation operation=calculatorMenu.getNonArithmeticOperation(3);
+        assertTrue(operation instanceof Exit);
     }
 }

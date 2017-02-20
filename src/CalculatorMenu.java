@@ -8,9 +8,15 @@ class CalculatorMenu {
     CalculatorMenu() {
         menuOne.put(1, new Addition());
         menuOne.put(2, new Subtraction());
+        menuTwo.put(3,new Exit());
     }
 
-    ArithmeticCalculatorOperation getCalculatorOperation(int option) {
+    ArithmeticCalculatorOperation getArithmeticOperation(int option) {
         return menuOne.get(option);
     }
+    NonArithmeticCalculatorOperation getNonArithmeticOperation(int option) {
+        return menuTwo.get(option);
+    }
+
+
 }
