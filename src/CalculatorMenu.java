@@ -3,7 +3,7 @@ import java.util.Map;
 
 class CalculatorMenu {
     Map<Integer, ArithmeticCalculatorOperation> menuOne = new HashMap<>();
-    Map<Integer,NonArithmeticCalculatorOperation> menuTwo=new HashMap<>();
+    Map<Integer, NonArithmeticCalculatorOperation> menuTwo = new HashMap<>();
 
     CalculatorMenu() {
         menuOne.put(1, new Addition());
