@@ -1,7 +1,3 @@
-package PACKAGE_NAME;
-
-/**
- * Created by krashee on 06/2017.
- */
 public interface CalculatorOperation {
+    float executeOperation(float numberOne,float numberTwo);
 }

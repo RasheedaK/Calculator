@@ -1,6 +1,6 @@
-class Subtraction {
+class Subtraction implements CalculatorOperation {
 
-    int execute(int numberOne, int numberTwo) {
-        return numberOne-numberTwo;
+    public float executeOperation(float numberOne, float numberTwo) {
+        return numberOne - numberTwo;
     }
 }
