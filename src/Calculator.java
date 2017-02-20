@@ -14,7 +14,7 @@ class Calculator {
             case 1: {
                 float operand1 = inputConsole.getInput();
                 float operand2 = inputConsole.getInput();
-                arithmeticOperation.executeOperation(operand1, operand2);
+                System.out.println(arithmeticOperation.executeOperation(operand1, operand2));
                 break;
             }
             case 2: {
@@ -38,6 +38,7 @@ class Calculator {
                 } catch (NumberFormatException exception) {
                     System.out.println("Invalid Input");
                 }
+                break;
             }
             case 5: {
                 nonArithmeticOperation.executeOperation();
