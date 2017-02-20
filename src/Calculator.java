@@ -17,7 +17,12 @@ class Calculator {
                 arithmeticOperation.executeOperation(1, 2);
                 break;
             }
-            case 3:{
+            case 3:
+                {
+                    arithmeticOperation.executeOperation(4, 3);
+                    break;
+                }
+            case 4: {
                 nonArithmeticOperation.executeOperation();
             }
         }

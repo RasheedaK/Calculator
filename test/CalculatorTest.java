@@ -22,13 +22,23 @@ public class CalculatorTest {
         calculator.calculate(2);
         verify(dummySubtraction, times(1)).executeOperation(anyFloat(), anyFloat());
     }
+
     @Test
-    public void shouldPerformExitOperationForOption3() {
+    public void shouldPerformExitOperationForOption4() {
         CalculatorMenu dummyMenu = mock(CalculatorMenu.class);
         Calculator calculator = new Calculator(dummyMenu);
         Exit dummyExit = mock(Exit.class);
-        when(dummyMenu.getNonArithmeticOperation(3)).thenReturn(dummyExit);
-        calculator.calculate(3);
+        when(dummyMenu.getNonArithmeticOperation(4)).thenReturn(dummyExit);
+        calculator.calculate(4);
         verify(dummyExit, times(1)).executeOperation();
+    }
+    @Test
+    public void shouldPerformMultiplicationOperationForOption3() {
+        CalculatorMenu dummyMenu = mock(CalculatorMenu.class);
+        Calculator calculator = new Calculator(dummyMenu);
+        Multiplication dummyMultiplication = mock(Multiplication.class);
+        when(dummyMenu.getArithmeticOperation(3)).thenReturn(dummyMultiplication);
+        calculator.calculate(3);
+        verify(dummyMultiplication, times(1)).executeOperation(anyFloat(),anyFloat());
     }
 }
