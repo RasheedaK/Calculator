@@ -24,12 +24,12 @@ public class CalculatorTest {
     }
 
     @Test
-    public void shouldPerformExitOperationForOption4() {
+    public void shouldPerformExitOperationForOption5() {
         CalculatorMenu dummyMenu = mock(CalculatorMenu.class);
         Calculator calculator = new Calculator(dummyMenu);
         Exit dummyExit = mock(Exit.class);
-        when(dummyMenu.getNonArithmeticOperation(4)).thenReturn(dummyExit);
-        calculator.calculate(4);
+        when(dummyMenu.getNonArithmeticOperation(5)).thenReturn(dummyExit);
+        calculator.calculate(5);
         verify(dummyExit, times(1)).executeOperation();
     }
 
@@ -41,5 +41,14 @@ public class CalculatorTest {
         when(dummyMenu.getArithmeticOperation(3)).thenReturn(dummyMultiplication);
         calculator.calculate(3);
         verify(dummyMultiplication, times(1)).executeOperation(anyFloat(), anyFloat());
+    }
+    @Test
+    public void shouldPerformDivisionOperationForOption4() {
+        CalculatorMenu dummyMenu = mock(CalculatorMenu.class);
+        Calculator calculator = new Calculator(dummyMenu);
+        Division dummyDivision = mock(Division.class);
+        when(dummyMenu.getArithmeticOperation(4)).thenReturn(dummyDivision);
+        calculator.calculate(4);
+        verify(dummyDivision, times(1)).executeOperation(anyFloat(), anyFloat());
     }
 }
