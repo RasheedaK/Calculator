@@ -1,5 +1,5 @@
-class Addition implements CalculatorOperation{
-    public float executeOperation(float numberOne, float numberTwo) {
-        return numberOne+numberTwo;
+class Addition implements CalculatorOperation {
+    float executeOperation(float numberOne, float numberTwo) {
+        return numberOne + numberTwo;
     }
 }
