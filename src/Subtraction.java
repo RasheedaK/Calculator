@@ -1,6 +1,6 @@
-class Subtraction implements CalculatorOperation {
+class Subtraction implements ArithmeticCalculatorOperation {
 
-    float executeOperation(float numberOne, float numberTwo) {
+    public float executeOperation(float numberOne, float numberTwo) {
         return numberOne - numberTwo;
     }
 }
