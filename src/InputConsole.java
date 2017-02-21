@@ -1,6 +1,7 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class InputConsole {
+class InputConsole {
     Scanner sc = new Scanner(System.in);
 
     float getInput() {
