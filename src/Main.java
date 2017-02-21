@@ -6,12 +6,11 @@ public class Main {
         OutputConsole outputConsole = new OutputConsole();
         CalculatorMenu calculatorMenu = new CalculatorMenu(outputConsole);
         calculatorMenu.showOptions();
-        try {
+        try{
             int input = (int) inputConsole.getInput();
-            Calculator calculator = new Calculator(calculatorMenu, inputConsole,outputConsole);
+            Calculator calculator = new Calculator(calculatorMenu, inputConsole, outputConsole);
             calculator.calculate(input);
-        }catch (InputMismatchException exception){
-            outputConsole.print("Invalid Input");
-        }
+        } catch (InputMismatchException exception) {
+            outputConsole.print("Invalid Input");}
     }
 }

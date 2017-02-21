@@ -8,7 +8,7 @@ public class CalculatorTest {
         CalculatorMenu dummyMenu = mock(CalculatorMenu.class);
         InputConsole dummyInputConsole = mock(InputConsole.class);
         OutputConsole dummyOutputConsole = mock(OutputConsole.class);
-        Calculator calculator = new Calculator(dummyMenu, dummyInputConsole,dummyOutputConsole);
+        Calculator calculator = new Calculator(dummyMenu, dummyInputConsole, dummyOutputConsole);
         Addition dummyAddition = mock(Addition.class);
         when(dummyMenu.getArithmeticOperation(1)).thenReturn(dummyAddition);
         calculator.calculate(1);
@@ -20,7 +20,7 @@ public class CalculatorTest {
         CalculatorMenu dummyMenu = mock(CalculatorMenu.class);
         InputConsole dummyInputConsole = mock(InputConsole.class);
         OutputConsole dummyOutputConsole = mock(OutputConsole.class);
-        Calculator calculator = new Calculator(dummyMenu, dummyInputConsole,dummyOutputConsole);
+        Calculator calculator = new Calculator(dummyMenu, dummyInputConsole, dummyOutputConsole);
         Subtraction dummySubtraction = mock(Subtraction.class);
         when(dummyMenu.getArithmeticOperation(2)).thenReturn(dummySubtraction);
         calculator.calculate(2);
@@ -32,7 +32,7 @@ public class CalculatorTest {
         CalculatorMenu dummyMenu = mock(CalculatorMenu.class);
         InputConsole dummyInputConsole = mock(InputConsole.class);
         OutputConsole dummyOutputConsole = mock(OutputConsole.class);
-        Calculator calculator = new Calculator(dummyMenu, dummyInputConsole,dummyOutputConsole);
+        Calculator calculator = new Calculator(dummyMenu, dummyInputConsole, dummyOutputConsole);
         Exit dummyExit = mock(Exit.class);
         when(dummyMenu.getNonArithmeticOperation(5)).thenReturn(dummyExit);
         calculator.calculate(5);
@@ -44,7 +44,7 @@ public class CalculatorTest {
         CalculatorMenu dummyMenu = mock(CalculatorMenu.class);
         InputConsole dummyInputConsole = mock(InputConsole.class);
         OutputConsole dummyOutputConsole = mock(OutputConsole.class);
-        Calculator calculator = new Calculator(dummyMenu, dummyInputConsole,dummyOutputConsole);
+        Calculator calculator = new Calculator(dummyMenu, dummyInputConsole, dummyOutputConsole);
         Multiplication dummyMultiplication = mock(Multiplication.class);
         when(dummyMenu.getArithmeticOperation(3)).thenReturn(dummyMultiplication);
         calculator.calculate(3);
@@ -56,7 +56,7 @@ public class CalculatorTest {
         CalculatorMenu dummyMenu = mock(CalculatorMenu.class);
         InputConsole dummyInputConsole = mock(InputConsole.class);
         OutputConsole dummyOutputConsole = mock(OutputConsole.class);
-        Calculator calculator = new Calculator(dummyMenu, dummyInputConsole,dummyOutputConsole);
+        Calculator calculator = new Calculator(dummyMenu, dummyInputConsole, dummyOutputConsole);
         Division dummyDivision = mock(Division.class);
         when(dummyMenu.getArithmeticOperation(4)).thenReturn(dummyDivision);
         calculator.calculate(4);
